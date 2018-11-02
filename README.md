@@ -58,6 +58,9 @@ end
 
 ## Development
 
+TODO: tells (send/receive)
+TODO: reconnects, raise errors when disconnected
+
 ## Contributing
 
 1. Fork it (<https://github.com/your-github-user/gossip/fork>)
