@@ -1,0 +1,9 @@
+name: gossip
+version: 0.1.0
+
+authors:
+  - Christopher Lee <f4milyp4nts@gmail.com>
+
+crystal: 0.26.1
+
+license: MIT
