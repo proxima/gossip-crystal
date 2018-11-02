@@ -28,8 +28,7 @@ spawn client.run
 client.verbose = true
 ```
 
-## Optionally, you can provide Gossip::Client a Proc which returns the MUD's online players.
-## It will relay that information to the Gossip network periodically.
+## Optionally, you can provide Gossip::Client a Proc which returns the MUD's online players. 
 
 ```crystal
 client.player_list = ->{ ["Player1", "Player2"] }
