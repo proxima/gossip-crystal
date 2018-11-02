@@ -55,6 +55,7 @@ spawn do
     msg = client.broadcast.receive
   end
 end
+```
 
 ## Development
 
