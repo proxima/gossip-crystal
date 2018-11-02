@@ -47,6 +47,15 @@ client.player_login.send "Player Two"
 client.player_logoff.send "Player One"
 ```
 
+## Listen to broadcasts from other MUDs
+
+```crystal
+spawn do
+  loop do
+    msg = client.broadcast.receive
+  end
+end
+
 ## Development
 
 ## Contributing

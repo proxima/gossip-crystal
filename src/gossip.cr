@@ -14,7 +14,7 @@ module Gossip
       getter {{verb.id}} : Channel(String) = Channel(String).new
     {% end %}
 
-    @broadcast : Channel(JSON::Any) = Channel(JSON::Any).new
+    getter broadcast : Channel(JSON::Any) = Channel(JSON::Any).new
 
     property player_list : Proc(Array(String)) = ->{ [] of String }
     property verbose : Bool = false
