@@ -2,7 +2,7 @@ require "http/web_socket"
 require "json"
 
 module Gossip
-  VERSION      = "0.1.0"
+  VERSION      = "0.1.1"
   LOGIN_LOGOUT = %w(player_login player_logout)
 
   class Client
@@ -112,6 +112,11 @@ module Gossip
       ws.on_message do |message|
         puts "Message: #{message}" if verbose
 
+        if message =~ /error/
+          puts "[Gossip] Unspecified error" if verbose
+          next
+        end
+
         response = JSON.parse(message)
         event_type = response["event"]
 
@@ -128,6 +133,7 @@ module Gossip
         end
       end
 
+      puts "#{authenticate}"
       ws.send authenticate
 
       ws.run
