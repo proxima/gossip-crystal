@@ -17,8 +17,7 @@ dependencies:
 ```crystal
 require "gossip"
 
-client = Gossip::Client.new
-client.setup "mud_name", "client-id", "client-secret"
+client = Gossip::Client.new "mud-name", "client-id", "client-secret"
 spawn client.run
 ```
 
